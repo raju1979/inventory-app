@@ -1,0 +1,3 @@
+<div class="col-md-12" *ngFor="let product of products, let productIndex = index">
+  <product-row class="pl-2 float-left w-100 mb-4" [product]="product" [index]="productIndex" (change)="productSelected($event)"  [class.productCardBg]="selectedProductIndex == productIndex"></product-row>
+</div>

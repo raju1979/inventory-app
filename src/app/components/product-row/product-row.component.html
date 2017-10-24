@@ -1,0 +1,23 @@
+<div class="productCardContainer w-100 p-2 mb-2 d-flex">
+  <div class="productImgContainer d-flex justify-content-center align-items-center">
+    <img class="h-75" [src]="product.imageUrl" alt="">
+  </div>
+
+  <div class="productDescriptionContainer ml-4">
+    <div class="h5">{{product?.name}}</div>
+    <div class="text-muted">
+      <small>SKU #{{product?.sku}}</small>
+    </div>
+    <ol class="list-inline m-0 pl-0 mt-2">
+      <li *ngFor="let department of product?.department, let i = index" class="pr-1 text-info list-inline-item">
+        {{department}}
+        <span *ngIf="i < product.department.length - 1">></span>
+      </li>
+    </ol>
+  </div>
+
+  <div class="productPriceContainer d-flex flex-column justify-content-between align-items-start">
+    <span>{{product?.price | currency:"INR":true}}</span>
+    <span><button class="btn btn-success" (click)="productClicked(productIndex)">Select</button></span>
+  </div>
+</div>

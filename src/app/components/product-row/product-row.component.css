@@ -1,0 +1,17 @@
+
+:host{
+    box-sizing: border-box;
+    border:1px solid transparent;
+}
+.productCardContainer{
+    height: 150px;
+    box-sizing: border-box;
+}
+
+.productImgContainer,.productPriceContainer{
+    width:150px;
+}
+
+.productDescriptionContainer{
+    flex:1;
+}
